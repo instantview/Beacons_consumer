@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>21AB5B35-27BC-4819-9372-348030CD2E56</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ConsumerBeacons</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1f9f46c9-5537-40b3-a766-ca1ac8bfca27</key>
+		<string>https://subversion.assembla.com/svn/legendary-ios</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>trunk/ConsumerBeacons/ConsumerBeacons.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1f9f46c9-5537-40b3-a766-ca1ac8bfca27</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1f9f46c9-5537-40b3-a766-ca1ac8bfca27</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
+			<string>trunk</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1f9f46c9-5537-40b3-a766-ca1ac8bfca27</string>
+			<key>IDESourceControlWCCName</key>
+			<string>legendary-ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>
