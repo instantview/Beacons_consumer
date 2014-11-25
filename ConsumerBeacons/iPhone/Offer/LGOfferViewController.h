@@ -10,6 +10,8 @@
 
 @interface LGOfferViewController : UIViewController
 
-- (id)initWithBeaconId:(NSString *)beaconId;
+@property (strong, nonatomic) NSDictionary *offerInfo;
+
+- (id)initWithBeacon:(NSDictionary *)beacon;
 
 @end

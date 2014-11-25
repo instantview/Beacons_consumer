@@ -21,11 +21,11 @@ PODS:
   - MBProgressHUD (0.9)
 
 DEPENDENCIES:
-  - AFNetworking (= 2.2.1)
+  - AFNetworking
   - MBProgressHUD (~> 0.8)
 
 SPEC CHECKSUMS:
   AFNetworking: 8dde8c8a6597ad95dac332a593c27e541bc87371
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
 
-COCOAPODS: 0.33.1
+COCOAPODS: 0.34.4

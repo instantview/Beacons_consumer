@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Legendary Games. All rights reserved.
 //
 
+#import <CoreLocation/CoreLocation.h>
 #import "UIColor+UIColorCategory.h"
 #import "LGAppDelegate.h"
 #import "LGBeaconFinderViewController.h"
@@ -19,35 +20,23 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
 	
+	if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+		[application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
+	}
+
 	if ([self isLoggedIn])
 	{
-        UIViewController *mainViewController = [UIViewController new];
-        
-        UILocalNotification *notification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
-        
-        if (notification)
-        {
-            NSLog(@"Picked up a local notification");
-            NSString *beaconId = [notification.userInfo objectForKey:@"beaconId"];
-            mainViewController = [[LGOfferViewController alloc] initWithBeaconId:beaconId];
-        }
-        else
-        {
-            NSLog(@"Couldn't find a local notification");
-            mainViewController = [[LGBeaconFinderViewController alloc] initWithNibName:@"BeaconFinder" bundle:nil];
-        }
+		LGBeaconFinderViewController *beaconFinder = [[LGBeaconFinderViewController alloc] initWithNibName:@"BeaconFinder" bundle:nil];
 		
-		UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:mainViewController];
+		UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:beaconFinder];
         navigation.navigationBar.barTintColor = [UIColor colorWithHexString:@"0xFFEE00"];
         navigation.navigationBar.translucent = YES;
-        //navigation.navigationBar.tintColor = [UIColor blackColor];
-        // navigation.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
         
 		self.window.rootViewController = navigation;
 	}
 	else
 	{
-		LGLoginViewController *login = [[LGLoginViewController alloc] initWithNibName:@"Login" bundle:nil];
+		LGLoginViewController *login = [LGLoginViewController new];
 		self.window.rootViewController = login;
 	}
     
@@ -58,24 +47,18 @@
 
 - (BOOL)isLoggedIn
 {
-    return YES;
-    
 	NSUserDefaults *standardDefaults = [[NSUserDefaults alloc] init];
 	
 	if (standardDefaults)
 	{
 		if ([standardDefaults objectForKey:@"guid"])
 		{
+			NSLog(@"%@", [standardDefaults objectForKey:@"guid"]);
 			return YES;
 		}
 	}
 	
 	return NO;
-}
-
-- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
-{
-    NSLog(@"Received notification: %@", notification);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

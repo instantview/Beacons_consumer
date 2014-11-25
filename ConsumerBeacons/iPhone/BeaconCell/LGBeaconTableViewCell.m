@@ -13,6 +13,7 @@
 
 @synthesize innerCell;
 @synthesize beaconName;
+@synthesize offerStrapline;
 
 const int kCellSpacing = 10;
 const int kCellHeight = 100;
@@ -20,7 +21,7 @@ const int kCellHeight = 100;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self){
+    if (self) {
         [self setup];
     }
     return self;
@@ -52,13 +53,13 @@ const int kCellHeight = 100;
     [self addSubview:self.beaconName];
     
     // add the offer description (one-liner)
-    UILabel *offerDescription = [UILabel new];
-    offerDescription.frame = CGRectMake(25, 37, self.frame.size.width - 100, 50);
-    offerDescription.textColor = [UIColor colorWithHexString:@"0x777777"];
-    offerDescription.text = @"Featuring intelligent Smart features, future-ready ...";
-    offerDescription.font = [UIFont systemFontOfSize:12.0f];
+    self.offerStrapline = [UILabel new];
+    self.offerStrapline.frame = CGRectMake(25, 37, self.frame.size.width - 100, 50);
+    self.offerStrapline.textColor = [UIColor colorWithHexString:@"0x777777"];
+    self.offerStrapline.text = @"Featuring intelligent Smart features, future-ready ...";
+    self.offerStrapline.font = [UIFont systemFontOfSize:12.0f];
     
-    [self addSubview:offerDescription];
+    [self addSubview:self.offerStrapline];
     
     // Add the pulse icon to this cell
     [self addBeaconPulse];

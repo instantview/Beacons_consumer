@@ -7,18 +7,28 @@
 //
 
 #import <CoreLocation/CoreLocation.h>
+#import <CoreBluetooth/CoreBluetooth.h>
+#import "AFNetworking.h"
+#import "Constants.h"
 #import "LGBeaconFinderViewController.h"
+#import "LGLoginViewController.h"
 #import "LGOfferViewController.h"
 #import "LGBeaconTableViewCell.h"
 #import "UIColor+UIColorCategory.h"
 
-@interface LGBeaconFinderViewController () <CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate>
+#define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+
+@interface LGBeaconFinderViewController () <CLLocationManagerDelegate, CBCentralManagerDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic) CLLocationManager *locationManager;
 @property (nonatomic) NSUUID *proximityUUID;
 @property (nonatomic) CLBeaconRegion *beaconRegion;
 @property (nonatomic) UITableView *tableView;
-@property (nonatomic) NSMutableDictionary *detectedBeacons;
+@property (nonatomic) NSMutableArray *detectedBeacons;
+@property (nonatomic) NSMutableArray *offers;
+@property (strong, nonatomic) CBCentralManager *bluetoothManager;
+
+
 
 @end
 
@@ -28,11 +38,15 @@
 @synthesize searchingLabel;
 @synthesize detectedBeacons;
 @synthesize tableView;
+@synthesize offers;
+@synthesize bluetoothManager;
 
 NSString *const kUUID = @"E2C56DB5-DFFB-48D2-B060-D0F5A71096E0";
 NSString *const kDefaultBeaconIdentifier = @"com.instantview.beacons";
 
-int const kBeaconCellHeight = 100;
+bool bluetoothEnabled = NO;
+
+int const kCellHeight = 100;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -54,15 +68,24 @@ int const kBeaconCellHeight = 100;
 
 - (void)setup
 {
+	self.bluetoothManager = [[CBCentralManager alloc] initWithDelegate:self
+																 queue:nil
+															   options:nil];
+	self.offers = [NSMutableArray new];
+	self.detectedBeacons = [NSMutableArray new];
+	
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.navigationItem.title = @"Discovered Offers";
-    
-    self.detectedBeacons = [NSMutableDictionary new];
+	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Logout"
+																			 style:UIBarButtonItemStyleDone
+																			target:self
+																			action:@selector(logout)];
     self.view.backgroundColor = [UIColor colorWithHexString:@"0x333333"];
     self.searchingLabel.textColor = [UIColor colorWithHexString:@"0xEEEEEE"];
     self.activity.color = [UIColor whiteColor];
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 64)
+												  style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.backgroundColor = [UIColor colorWithHexString:@"0x333333"];
@@ -88,18 +111,33 @@ int const kBeaconCellHeight = 100;
         self.beaconRegion = [[CLBeaconRegion alloc]
                              initWithProximityUUID:self.proximityUUID
                              identifier: kDefaultBeaconIdentifier];
-        self.beaconRegion.notifyEntryStateOnDisplay = YES;
+        self.beaconRegion.notifyEntryStateOnDisplay = NO;
         self.beaconRegion.notifyOnEntry = YES;
         self.beaconRegion.notifyOnExit = YES;
-        
+		
+		if(IS_OS_8_OR_LATER) {
+			[self.locationManager requestAlwaysAuthorization];
+		}
+		
         [self.locationManager startMonitoringForRegion:self.beaconRegion];
         [self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
     }
 }
 
+- (void)bluetoothServiceUpdate
+{
+	BOOL locationAllowed = [CLLocationManager locationServicesEnabled];
+	
+	if (!bluetoothEnabled || !locationAllowed)
+	{
+		[self displayMessage:@"Please enable bluetooth and location services."];
+	}
+}
+
 - (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region
 {
-    //[self.locationManager requestStateForRegion:self.beaconRegion];
+    [self.locationManager requestStateForRegion:region];
+    //[self sendNotificationForMessage:@"Start monitoring..."];
     NSLog(@"Start monitoring...");
 }
 
@@ -115,15 +153,13 @@ int const kBeaconCellHeight = 100;
 
 - (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
 {
+    //[self sendNotificationForMessage:@"Enter region"];
     NSLog(@"Enter region...");
-    
-    if ([region isMemberOfClass:[CLBeaconRegion class]] && [CLLocationManager isRangingAvailable]) {
-        [self.locationManager startRangingBeaconsInRegion:(CLBeaconRegion *)region];
-    }
 }
 
 - (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region
 {
+    //[self sendNotificationForMessage:@"Exit region"];
     NSLog(@"Exit region...");
     
     if ([region isMemberOfClass:[CLBeaconRegion class]] && [CLLocationManager isRangingAvailable]) {
@@ -145,7 +181,7 @@ int const kBeaconCellHeight = 100;
             if ([region isMemberOfClass:[CLBeaconRegion class]] && [CLLocationManager isRangingAvailable])
             {
                 NSLog(@"Outside");
-                [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
+                //[self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
             }
         case CLRegionStateUnknown:
         default:
@@ -154,7 +190,9 @@ int const kBeaconCellHeight = 100;
     }
 }
 
-- (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
+- (void)locationManager:(CLLocationManager *)manager
+		didRangeBeacons:(NSArray *)beacons
+			   inRegion:(CLBeaconRegion *)region
 {
     NSLog(@"Total beacons: %d", [beacons count]);
     
@@ -165,11 +203,34 @@ int const kBeaconCellHeight = 100;
         NSString *beaconID = [self createBeaconIDFromBeacon:beacon];
         
         [visibleBeacons addObject:beaconID];
-        
-        if (![self.detectedBeacons objectForKey:beaconID])
+		
+		switch (beacon.proximity)
+		{
+			case CLProximityNear:
+				NSLog(@"Near");
+				break;
+			case CLProximityImmediate:
+				NSLog(@"Immediate");
+				break;
+			case CLProximityUnknown:
+				NSLog(@"Unknown");
+				break;
+			case CLProximityFar:
+				NSLog(@"Far");
+				break;
+		}
+		
+		if (beacon.proximity == CLProximityFar)
+		{
+			[self removeBeaconFromDictionary:beaconID];
+		}
+		
+        if (![self.detectedBeacons containsObject:beaconID])
         {
-            [self addBeaconToDictionary:beaconID];
-            [self sendNotificationForMessage:@"You have discovered a new offer!" withBeaconId:beaconID];
+			if (CLProximityNear == beacon.proximity || CLProximityImmediate == beacon.proximity)
+			{
+				[self addBeaconToDictionary:beaconID];
+			}
         }
     }
     
@@ -180,12 +241,27 @@ int const kBeaconCellHeight = 100;
             [self removeBeaconFromDictionary:key];
         }
     }
-    
+}
+
+- (void)centralManagerDidUpdateState:(CBCentralManager *)central
+{
+	bluetoothEnabled = ([central state] == CBCentralManagerStatePoweredOn) ? YES: NO;
+	[self bluetoothServiceUpdate];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+	NSLog(@"%@", error);
+	self.detectedBeacons = NULL;
+	self.offers = NULL;
+	
+	[self.tableView reloadData];
+	[self bluetoothServiceUpdate];
 }
 
 - (NSString *)createBeaconIDFromBeacon:(CLBeacon *)beacon
 {
-    return [NSString stringWithFormat:@"%@|%d|%d",
+    return [NSString stringWithFormat:@"%@-%d-%d",
                           [beacon.proximityUUID UUIDString],
                           [beacon.major integerValue],
                           [beacon.minor integerValue]];
@@ -193,40 +269,107 @@ int const kBeaconCellHeight = 100;
 
 - (void)addBeaconToDictionary:(NSString *)beaconID
 {
-    [self.detectedBeacons setObject:@"10% Off Samsung TV's" forKey:beaconID];
-    [self.tableView reloadData];
+	[self.detectedBeacons addObject:beaconID];
+	
+	NSString *url = [NSString stringWithFormat:@"%@/product/getProduct", kBaseAPIUrl];
+	NSDictionary *params = @{@"UUID": beaconID};
+	
+	AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+	
+	[manager  GET:url
+	   parameters:params
+		  success:^(AFHTTPRequestOperation *operation, id responseObject){
+			  
+			  NSLog(@"Beacon info: %@", responseObject);
+			  
+			  NSDictionary *productInfo = @{
+											@"imageURL" : responseObject[@"imageURL"],
+											@"price" : responseObject[@"price"],
+											@"productName" : responseObject[@"productName"]
+											};
+			  
+			  [self getProductOffers:beaconID withProductInfo:productInfo];
+			  
+		  } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+			  NSLog(@"Error: %@", error);
+		  }];
+}
+
+- (void)getProductOffers:(NSString *)beaconId
+		 withProductInfo:(NSDictionary *)productInfo
+{
+	NSString *url = [NSString stringWithFormat:@"%@/offer/getProductOffersByUUID", kBaseAPIUrl];
+	NSDictionary *params = @{@"beaconUUID": beaconId};
+	
+	AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+	
+	[manager  GET:url
+	   parameters:params
+		  success:^(AFHTTPRequestOperation *operation, id responseObject){
+			  
+			  NSLog(@"%@", responseObject);
+			  
+			  for (NSDictionary *offer in responseObject)
+			  {
+				  NSMutableDictionary *newOffer = [offer mutableCopy];
+				  
+				  [newOffer setValue:beaconId forKey:@"UUID"];
+				  [newOffer setValue:productInfo[@"imageURL"] forKey:@"imageURL"];
+				  [newOffer setValue:productInfo[@"productName"] forKey:@"productName"];
+				  [newOffer setValue:productInfo[@"price"] forKey:@"price"];
+				  
+				  [self.offers addObject:newOffer];
+			  }
+			  
+			  [self sendNotificationForMessage:@"You have discovered new offers."];
+			  [self.tableView reloadData];
+			  
+		  } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+			  NSLog(@"Error: %@", error);
+		  }];
 }
 
 - (void)removeBeaconFromDictionary:(NSString *)beaconID
 {
-    [self.detectedBeacons removeObjectForKey:beaconID];
+	[self.detectedBeacons removeObject:beaconID];
+	
+	NSArray *offersCopy = [self.offers copy];
+	
+	for (int i=0; i<[offersCopy count]; i++)
+	{
+		NSDictionary *offer = [offersCopy objectAtIndex:i];
+		
+		if ([offer[@"UUID"] isEqualToString:beaconID])
+		{
+			NSLog(@"removing offer");
+			[self.offers removeObjectAtIndex:i];
+		}
+	}
+	
     [self.tableView reloadData];
 }
 
-- (void)sendNotificationForMessage:(NSString *)notificationText withBeaconId:(NSString *)beaconId
+- (void)sendNotificationForMessage:(NSString *)notificationText
 {
     UILocalNotification *notification = [UILocalNotification new];
     notification.alertBody = notificationText;
-    notification.userInfo = [NSDictionary dictionaryWithObject:beaconId forKey:@"beaconId"];
     notification.fireDate = [NSDate date];
     notification.soundName = UILocalNotificationDefaultSoundName;
     
-    [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
 }
 
 # pragma mark - UITableView Delegates and data source
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    int total = [self.detectedBeacons count];
-    
-    self.tableView.hidden = (total == 0) ? YES : NO;
-    
-    return total;
+    self.tableView.hidden = (self.offers.count == 0) ? YES : NO;
+    return self.offers.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return kBeaconCellHeight;
+    return kCellHeight;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -238,15 +381,14 @@ int const kBeaconCellHeight = 100;
     if (cell == nil){
         cell = [[LGBeaconTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    
-    NSArray *keys = [self.detectedBeacons allKeys];
-    NSString *key = [keys objectAtIndex:indexPath.row];
-    NSString *beaconName = [self.detectedBeacons objectForKey:key];
-    
-    cell.beaconName.text = beaconName;
-    cell.accessoryType = UITableViewCellAccessoryNone;
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    
+	
+	NSDictionary *offer = [self.offers objectAtIndex:indexPath.row];
+	
+	cell.beaconName.text = offer[@"productName"];
+	cell.offerStrapline.text = offer[@"title"];
+	cell.accessoryType = UITableViewCellAccessoryNone;
+	cell.selectionStyle = UITableViewCellSelectionStyleNone;
+	
     return cell;
 }
 
@@ -263,13 +405,44 @@ int const kBeaconCellHeight = 100;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray *keys = [self.detectedBeacons allKeys];
-    NSString *key = [keys objectAtIndex:indexPath.row];
-    
-    NSLog(@"Key: %@", key);
-    LGOfferViewController *offer = [[LGOfferViewController alloc] initWithBeaconId:key];
-    
+    LGOfferViewController *offer = [[LGOfferViewController alloc] initWithBeacon:[self.offers objectAtIndex:indexPath.row]];
     [self.navigationController pushViewController:offer animated:YES];
+}
+
+- (void)logout
+{
+	NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+	[userDefaults removeObjectForKey:@"guid"];
+	
+	LGLoginViewController *login = [LGLoginViewController new];
+	
+	[self presentViewController:login animated:NO completion:nil];
+}
+
+- (void)displayMessage:(NSString *)message
+{
+	UIView *messageView = [UIView new];
+	messageView.frame = CGRectMake(0, 0, self.view.frame.size.width, 60);
+	messageView.backgroundColor = [UIColor whiteColor];
+	messageView.layer.masksToBounds = NO;
+	messageView.layer.shadowOffset = CGSizeMake(0, 4);
+	messageView.layer.shadowRadius = 5;
+	messageView.layer.shadowOpacity = 0.25;
+	
+	UILabel *messageLabel = [UILabel new];
+	messageLabel.frame = CGRectMake(0, 0, messageView.frame.size.width, messageView.frame.size.height);
+	messageLabel.text = message;
+	messageLabel.textAlignment = NSTextAlignmentCenter;
+	messageLabel.font = [UIFont boldSystemFontOfSize:12.0];
+	
+	[messageView addSubview:messageLabel];
+	[self.view addSubview:messageView];
+	[self performSelector:@selector(removeMessage:) withObject:messageView afterDelay:5];
+}
+
+- (void)removeMessage:(UIView *)messageView
+{
+	[messageView removeFromSuperview];
 }
 
 - (void)didReceiveMemoryWarning

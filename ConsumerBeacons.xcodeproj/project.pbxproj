@@ -1,612 +1,1577 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		9B523D91A5BE404BB6A557FE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CEEECE606B3496B88D9C399 /* libPods.a */; };
-		AD2BD54719B725B6006E8823 /* LGLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2BD54519B725B6006E8823 /* LGLoginViewController.m */; };
-		AD2BD54819B725B6006E8823 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD2BD54619B725B6006E8823 /* Login.xib */; };
-		CECE64C519B6047F00F7F22A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE64C419B6047F00F7F22A /* Foundation.framework */; };
-		CECE64C719B6047F00F7F22A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE64C619B6047F00F7F22A /* CoreGraphics.framework */; };
-		CECE64C919B6047F00F7F22A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE64C819B6047F00F7F22A /* UIKit.framework */; };
-		CECE64CF19B6047F00F7F22A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CECE64CD19B6047F00F7F22A /* InfoPlist.strings */; };
-		CECE64D119B6047F00F7F22A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CECE64D019B6047F00F7F22A /* main.m */; };
-		CECE64D519B6047F00F7F22A /* LGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CECE64D419B6047F00F7F22A /* LGAppDelegate.m */; };
-		CECE64D719B6047F00F7F22A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECE64D619B6047F00F7F22A /* Images.xcassets */; };
-		CECE64DE19B6047F00F7F22A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE64DD19B6047F00F7F22A /* XCTest.framework */; };
-		CECE64DF19B6047F00F7F22A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE64C419B6047F00F7F22A /* Foundation.framework */; };
-		CECE64E019B6047F00F7F22A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE64C819B6047F00F7F22A /* UIKit.framework */; };
-		CECE64E819B6047F00F7F22A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CECE64E619B6047F00F7F22A /* InfoPlist.strings */; };
-		CECE64EA19B6047F00F7F22A /* ConsumerBeaconsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CECE64E919B6047F00F7F22A /* ConsumerBeaconsTests.m */; };
-		CECE64FE19B61CDD00F7F22A /* LGBeaconFinderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECE64FC19B61CDD00F7F22A /* LGBeaconFinderViewController.m */; };
-		CECE64FF19B61CDD00F7F22A /* BeaconFinder.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECE64FD19B61CDD00F7F22A /* BeaconFinder.xib */; };
-		CECE650419B6228F00F7F22A /* LGOfferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECE650219B6228F00F7F22A /* LGOfferViewController.m */; };
-		CECE650A19BDD92E00F7F22A /* UIColor+UIColorCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CECE650919BDD92E00F7F22A /* UIColor+UIColorCategory.m */; };
-		CECE650E19C84C6700F7F22A /* LGBeaconTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CECE650D19C84C6700F7F22A /* LGBeaconTableViewCell.m */; };
-		CECE651019C8663C00F7F22A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE650F19C8663C00F7F22A /* QuartzCore.framework */; };
-		CECE651419C8989100F7F22A /* samsung@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CECE651319C8989100F7F22A /* samsung@2x.jpg */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		CECE64E119B6047F00F7F22A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CECE64B919B6047F00F7F22A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CECE64C019B6047F00F7F22A;
-			remoteInfo = ConsumerBeacons;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		1CEEECE606B3496B88D9C399 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD2BD54419B725B6006E8823 /* LGLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGLoginViewController.h; sourceTree = "<group>"; };
-		AD2BD54519B725B6006E8823 /* LGLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGLoginViewController.m; sourceTree = "<group>"; };
-		AD2BD54619B725B6006E8823 /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
-		ADD749967529402E88AD0606 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		CECE64C119B6047F00F7F22A /* ConsumerBeacons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConsumerBeacons.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CECE64C419B6047F00F7F22A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		CECE64C619B6047F00F7F22A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		CECE64C819B6047F00F7F22A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		CECE64CC19B6047F00F7F22A /* ConsumerBeacons-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ConsumerBeacons-Info.plist"; path = "Application/ConsumerBeacons-Info.plist"; sourceTree = "<group>"; };
-		CECE64CE19B6047F00F7F22A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CECE64D019B6047F00F7F22A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Application/main.m; sourceTree = "<group>"; };
-		CECE64D219B6047F00F7F22A /* ConsumerBeacons-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ConsumerBeacons-Prefix.pch"; path = "Application/ConsumerBeacons-Prefix.pch"; sourceTree = "<group>"; };
-		CECE64D319B6047F00F7F22A /* LGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LGAppDelegate.h; path = Application/LGAppDelegate.h; sourceTree = "<group>"; };
-		CECE64D419B6047F00F7F22A /* LGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LGAppDelegate.m; path = Application/LGAppDelegate.m; sourceTree = "<group>"; };
-		CECE64D619B6047F00F7F22A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Application/Images.xcassets; sourceTree = "<group>"; };
-		CECE64DC19B6047F00F7F22A /* ConsumerBeaconsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConsumerBeaconsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CECE64DD19B6047F00F7F22A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		CECE64E519B6047F00F7F22A /* ConsumerBeaconsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ConsumerBeaconsTests-Info.plist"; sourceTree = "<group>"; };
-		CECE64E719B6047F00F7F22A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CECE64E919B6047F00F7F22A /* ConsumerBeaconsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConsumerBeaconsTests.m; sourceTree = "<group>"; };
-		CECE64FB19B61CDD00F7F22A /* LGBeaconFinderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LGBeaconFinderViewController.h; path = iPhone/BeaconFinder/LGBeaconFinderViewController.h; sourceTree = "<group>"; };
-		CECE64FC19B61CDD00F7F22A /* LGBeaconFinderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LGBeaconFinderViewController.m; path = iPhone/BeaconFinder/LGBeaconFinderViewController.m; sourceTree = "<group>"; };
-		CECE64FD19B61CDD00F7F22A /* BeaconFinder.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BeaconFinder.xib; path = iPhone/BeaconFinder/BeaconFinder.xib; sourceTree = "<group>"; };
-		CECE650119B6228F00F7F22A /* LGOfferViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LGOfferViewController.h; path = iPhone/Offer/LGOfferViewController.h; sourceTree = "<group>"; };
-		CECE650219B6228F00F7F22A /* LGOfferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LGOfferViewController.m; path = iPhone/Offer/LGOfferViewController.m; sourceTree = "<group>"; };
-		CECE650819BDD92E00F7F22A /* UIColor+UIColorCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+UIColorCategory.h"; path = "Library/Categories/UIColor+UIColorCategory.h"; sourceTree = "<group>"; };
-		CECE650919BDD92E00F7F22A /* UIColor+UIColorCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+UIColorCategory.m"; path = "Library/Categories/UIColor+UIColorCategory.m"; sourceTree = "<group>"; };
-		CECE650C19C84C6700F7F22A /* LGBeaconTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LGBeaconTableViewCell.h; path = iPhone/BeaconCell/LGBeaconTableViewCell.h; sourceTree = "<group>"; };
-		CECE650D19C84C6700F7F22A /* LGBeaconTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LGBeaconTableViewCell.m; path = iPhone/BeaconCell/LGBeaconTableViewCell.m; sourceTree = "<group>"; };
-		CECE650F19C8663C00F7F22A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		CECE651319C8989100F7F22A /* samsung@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "samsung@2x.jpg"; path = "Resources/samsung@2x.jpg"; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		CECE64BE19B6047F00F7F22A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CECE651019C8663C00F7F22A /* QuartzCore.framework in Frameworks */,
-				CECE64C719B6047F00F7F22A /* CoreGraphics.framework in Frameworks */,
-				CECE64C919B6047F00F7F22A /* UIKit.framework in Frameworks */,
-				CECE64C519B6047F00F7F22A /* Foundation.framework in Frameworks */,
-				9B523D91A5BE404BB6A557FE /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CECE64D919B6047F00F7F22A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CECE64DE19B6047F00F7F22A /* XCTest.framework in Frameworks */,
-				CECE64E019B6047F00F7F22A /* UIKit.framework in Frameworks */,
-				CECE64DF19B6047F00F7F22A /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		AD2BD54319B725B6006E8823 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				AD2BD54419B725B6006E8823 /* LGLoginViewController.h */,
-				AD2BD54519B725B6006E8823 /* LGLoginViewController.m */,
-				AD2BD54619B725B6006E8823 /* Login.xib */,
-			);
-			name = Login;
-			path = iPhone/Login;
-			sourceTree = "<group>";
-		};
-		CECE64B819B6047F00F7F22A = {
-			isa = PBXGroup;
-			children = (
-				CECE64CA19B6047F00F7F22A /* ConsumerBeacons */,
-				CECE64E319B6047F00F7F22A /* ConsumerBeaconsTests */,
-				CECE64C319B6047F00F7F22A /* Frameworks */,
-				CECE64C219B6047F00F7F22A /* Products */,
-				CECE64F319B6053E00F7F22A /* Resources */,
-				ADD749967529402E88AD0606 /* Pods.xcconfig */,
-			);
-			sourceTree = "<group>";
-		};
-		CECE64C219B6047F00F7F22A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CECE64C119B6047F00F7F22A /* ConsumerBeacons.app */,
-				CECE64DC19B6047F00F7F22A /* ConsumerBeaconsTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		CECE64C319B6047F00F7F22A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				CECE650F19C8663C00F7F22A /* QuartzCore.framework */,
-				CECE64C419B6047F00F7F22A /* Foundation.framework */,
-				CECE64C619B6047F00F7F22A /* CoreGraphics.framework */,
-				CECE64C819B6047F00F7F22A /* UIKit.framework */,
-				CECE64DD19B6047F00F7F22A /* XCTest.framework */,
-				1CEEECE606B3496B88D9C399 /* libPods.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CECE64CA19B6047F00F7F22A /* ConsumerBeacons */ = {
-			isa = PBXGroup;
-			children = (
-				CECE650619BDD8FD00F7F22A /* Library */,
-				CECE64F419B605BA00F7F22A /* Application */,
-				CECE64F519B605BE00F7F22A /* iPhone */,
-			);
-			path = ConsumerBeacons;
-			sourceTree = "<group>";
-		};
-		CECE64E319B6047F00F7F22A /* ConsumerBeaconsTests */ = {
-			isa = PBXGroup;
-			children = (
-				CECE64E919B6047F00F7F22A /* ConsumerBeaconsTests.m */,
-				CECE64E419B6047F00F7F22A /* Supporting Files */,
-			);
-			path = ConsumerBeaconsTests;
-			sourceTree = "<group>";
-		};
-		CECE64E419B6047F00F7F22A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				CECE64E519B6047F00F7F22A /* ConsumerBeaconsTests-Info.plist */,
-				CECE64E619B6047F00F7F22A /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		CECE64F319B6053E00F7F22A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				CECE651319C8989100F7F22A /* samsung@2x.jpg */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		CECE64F419B605BA00F7F22A /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				CECE64D319B6047F00F7F22A /* LGAppDelegate.h */,
-				CECE64D419B6047F00F7F22A /* LGAppDelegate.m */,
-				CECE64D619B6047F00F7F22A /* Images.xcassets */,
-				CECE64CC19B6047F00F7F22A /* ConsumerBeacons-Info.plist */,
-				CECE64CD19B6047F00F7F22A /* InfoPlist.strings */,
-				CECE64D019B6047F00F7F22A /* main.m */,
-				CECE64D219B6047F00F7F22A /* ConsumerBeacons-Prefix.pch */,
-			);
-			name = Application;
-			sourceTree = "<group>";
-		};
-		CECE64F519B605BE00F7F22A /* iPhone */ = {
-			isa = PBXGroup;
-			children = (
-				CECE650B19C84C2800F7F22A /* BeaconCell */,
-				AD2BD54319B725B6006E8823 /* Login */,
-				CECE650019B6227300F7F22A /* Offer */,
-				CECE64F719B61CA500F7F22A /* BeaconFinder */,
-			);
-			name = iPhone;
-			sourceTree = "<group>";
-		};
-		CECE64F719B61CA500F7F22A /* BeaconFinder */ = {
-			isa = PBXGroup;
-			children = (
-				CECE64FB19B61CDD00F7F22A /* LGBeaconFinderViewController.h */,
-				CECE64FC19B61CDD00F7F22A /* LGBeaconFinderViewController.m */,
-				CECE64FD19B61CDD00F7F22A /* BeaconFinder.xib */,
-			);
-			name = BeaconFinder;
-			sourceTree = "<group>";
-		};
-		CECE650019B6227300F7F22A /* Offer */ = {
-			isa = PBXGroup;
-			children = (
-				CECE650119B6228F00F7F22A /* LGOfferViewController.h */,
-				CECE650219B6228F00F7F22A /* LGOfferViewController.m */,
-			);
-			name = Offer;
-			sourceTree = "<group>";
-		};
-		CECE650619BDD8FD00F7F22A /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				CECE650719BDD90400F7F22A /* Categories */,
-			);
-			name = Library;
-			sourceTree = "<group>";
-		};
-		CECE650719BDD90400F7F22A /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				CECE650819BDD92E00F7F22A /* UIColor+UIColorCategory.h */,
-				CECE650919BDD92E00F7F22A /* UIColor+UIColorCategory.m */,
-			);
-			name = Categories;
-			sourceTree = "<group>";
-		};
-		CECE650B19C84C2800F7F22A /* BeaconCell */ = {
-			isa = PBXGroup;
-			children = (
-				CECE650C19C84C6700F7F22A /* LGBeaconTableViewCell.h */,
-				CECE650D19C84C6700F7F22A /* LGBeaconTableViewCell.m */,
-			);
-			name = BeaconCell;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		CECE64C019B6047F00F7F22A /* ConsumerBeacons */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CECE64ED19B6047F00F7F22A /* Build configuration list for PBXNativeTarget "ConsumerBeacons" */;
-			buildPhases = (
-				B8B4F934F53D449CA2160B4E /* Check Pods Manifest.lock */,
-				CECE64BD19B6047F00F7F22A /* Sources */,
-				CECE64BE19B6047F00F7F22A /* Frameworks */,
-				CECE64BF19B6047F00F7F22A /* Resources */,
-				AF0670852276495883F8EDD9 /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ConsumerBeacons;
-			productName = ConsumerBeacons;
-			productReference = CECE64C119B6047F00F7F22A /* ConsumerBeacons.app */;
-			productType = "com.apple.product-type.application";
-		};
-		CECE64DB19B6047F00F7F22A /* ConsumerBeaconsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CECE64F019B6047F00F7F22A /* Build configuration list for PBXNativeTarget "ConsumerBeaconsTests" */;
-			buildPhases = (
-				CECE64D819B6047F00F7F22A /* Sources */,
-				CECE64D919B6047F00F7F22A /* Frameworks */,
-				CECE64DA19B6047F00F7F22A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CECE64E219B6047F00F7F22A /* PBXTargetDependency */,
-			);
-			name = ConsumerBeaconsTests;
-			productName = ConsumerBeaconsTests;
-			productReference = CECE64DC19B6047F00F7F22A /* ConsumerBeaconsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		CECE64B919B6047F00F7F22A /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				CLASSPREFIX = LG;
-				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = "Legendary Games";
-				TargetAttributes = {
-					CECE64DB19B6047F00F7F22A = {
-						TestTargetID = CECE64C019B6047F00F7F22A;
-					};
-				};
-			};
-			buildConfigurationList = CECE64BC19B6047F00F7F22A /* Build configuration list for PBXProject "ConsumerBeacons" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = CECE64B819B6047F00F7F22A;
-			productRefGroup = CECE64C219B6047F00F7F22A /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				CECE64C019B6047F00F7F22A /* ConsumerBeacons */,
-				CECE64DB19B6047F00F7F22A /* ConsumerBeaconsTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		CECE64BF19B6047F00F7F22A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CECE64CF19B6047F00F7F22A /* InfoPlist.strings in Resources */,
-				CECE64FF19B61CDD00F7F22A /* BeaconFinder.xib in Resources */,
-				AD2BD54819B725B6006E8823 /* Login.xib in Resources */,
-				CECE64D719B6047F00F7F22A /* Images.xcassets in Resources */,
-				CECE651419C8989100F7F22A /* samsung@2x.jpg in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CECE64DA19B6047F00F7F22A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CECE64E819B6047F00F7F22A /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		AF0670852276495883F8EDD9 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B8B4F934F53D449CA2160B4E /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		CECE64BD19B6047F00F7F22A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CECE64D119B6047F00F7F22A /* main.m in Sources */,
-				CECE650A19BDD92E00F7F22A /* UIColor+UIColorCategory.m in Sources */,
-				CECE650E19C84C6700F7F22A /* LGBeaconTableViewCell.m in Sources */,
-				AD2BD54719B725B6006E8823 /* LGLoginViewController.m in Sources */,
-				CECE64D519B6047F00F7F22A /* LGAppDelegate.m in Sources */,
-				CECE650419B6228F00F7F22A /* LGOfferViewController.m in Sources */,
-				CECE64FE19B61CDD00F7F22A /* LGBeaconFinderViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CECE64D819B6047F00F7F22A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CECE64EA19B6047F00F7F22A /* ConsumerBeaconsTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CECE64E219B6047F00F7F22A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CECE64C019B6047F00F7F22A /* ConsumerBeacons */;
-			targetProxy = CECE64E119B6047F00F7F22A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		CECE64CD19B6047F00F7F22A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CECE64CE19B6047F00F7F22A /* en */,
-			);
-			name = InfoPlist.strings;
-			path = Application;
-			sourceTree = "<group>";
-		};
-		CECE64E619B6047F00F7F22A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CECE64E719B6047F00F7F22A /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		CECE64EB19B6047F00F7F22A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		CECE64EC19B6047F00F7F22A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		CECE64EE19B6047F00F7F22A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ADD749967529402E88AD0606 /* Pods.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ConsumerBeacons/Application/ConsumerBeacons-Prefix.pch";
-				INFOPLIST_FILE = "ConsumerBeacons/Application/ConsumerBeacons-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "289793a2-bae2-4bed-8904-5507edc08562";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		CECE64EF19B6047F00F7F22A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ADD749967529402E88AD0606 /* Pods.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ConsumerBeacons/Application/ConsumerBeacons-Prefix.pch";
-				INFOPLIST_FILE = "ConsumerBeacons/Application/ConsumerBeacons-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a6917eab-927d-48cd-8cad-b89ee4747af0";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		CECE64F119B6047F00F7F22A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ConsumerBeacons.app/ConsumerBeacons";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ConsumerBeacons/ConsumerBeacons-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "ConsumerBeaconsTests/ConsumerBeaconsTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		CECE64F219B6047F00F7F22A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ConsumerBeacons.app/ConsumerBeacons";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ConsumerBeacons/ConsumerBeacons-Prefix.pch";
-				INFOPLIST_FILE = "ConsumerBeaconsTests/ConsumerBeaconsTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		CECE64BC19B6047F00F7F22A /* Build configuration list for PBXProject "ConsumerBeacons" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CECE64EB19B6047F00F7F22A /* Debug */,
-				CECE64EC19B6047F00F7F22A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CECE64ED19B6047F00F7F22A /* Build configuration list for PBXNativeTarget "ConsumerBeacons" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CECE64EE19B6047F00F7F22A /* Debug */,
-				CECE64EF19B6047F00F7F22A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CECE64F019B6047F00F7F22A /* Build configuration list for PBXNativeTarget "ConsumerBeaconsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CECE64F119B6047F00F7F22A /* Debug */,
-				CECE64F219B6047F00F7F22A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = CECE64B919B6047F00F7F22A /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>0D620961A167C38302425D62</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BD1E02019ECF136EC62DDA04</string>
+				<string>AF8B86587B8E410BF418B9D4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1CEEECE606B3496B88D9C399</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>9B523D91A5BE404BB6A557FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1CEEECE606B3496B88D9C399</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AD3753C019D395DA00BCDBA3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreLocation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreLocation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>AD3753C119D395DA00BCDBA3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AD3753C019D395DA00BCDBA3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>ADA1B1E219D55CBA008CF35E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>ADA1B1E319D55CF3008CF35E</string>
+				<string>ADA1B1E419D55CF3008CF35E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Login</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>ADA1B1E319D55CF3008CF35E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>LGLoginViewController.h</string>
+			<key>path</key>
+			<string>iPhone/Login/LGLoginViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>ADA1B1E419D55CF3008CF35E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>LGLoginViewController.m</string>
+			<key>path</key>
+			<string>iPhone/Login/LGLoginViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>ADA1B1E519D55CF3008CF35E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>ADA1B1E419D55CF3008CF35E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>ADA1B1E619D5749B008CF35E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>ADA1B1E719D5749B008CF35E</string>
+				<string>ADA1B1E819D5749B008CF35E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Constants</string>
+			<key>path</key>
+			<string>Library/Constants</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>ADA1B1E719D5749B008CF35E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Constants.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>ADA1B1E819D5749B008CF35E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Constants.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>ADA1B1E919D5749B008CF35E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>ADA1B1E819D5749B008CF35E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>ADA1B1EE19D57E18008CF35E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>ADA1B1EF19D57E37008CF35E</string>
+				<string>ADA1B1F019D57E37008CF35E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Register</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>ADA1B1EF19D57E37008CF35E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>LGRegisterViewController.h</string>
+			<key>path</key>
+			<string>iPhone/Register/LGRegisterViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>ADA1B1F019D57E37008CF35E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>LGRegisterViewController.m</string>
+			<key>path</key>
+			<string>iPhone/Register/LGRegisterViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>ADA1B1F119D57E37008CF35E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>ADA1B1F019D57E37008CF35E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AF0670852276495883F8EDD9</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>AF8B86587B8E410BF418B9D4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods/Pods.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B8B4F934F53D449CA2160B4E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>BD1E02019ECF136EC62DDA04</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods/Pods.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE64B819B6047F00F7F22A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CECE64CA19B6047F00F7F22A</string>
+				<string>CECE64E319B6047F00F7F22A</string>
+				<string>CECE64C319B6047F00F7F22A</string>
+				<string>CECE64C219B6047F00F7F22A</string>
+				<string>CECE64F319B6053E00F7F22A</string>
+				<string>0D620961A167C38302425D62</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE64B919B6047F00F7F22A</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>CLASSPREFIX</key>
+				<string>LG</string>
+				<key>LastUpgradeCheck</key>
+				<string>0510</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Legendary Games</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>CECE64DB19B6047F00F7F22A</key>
+					<dict>
+						<key>TestTargetID</key>
+						<string>CECE64C019B6047F00F7F22A</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>CECE64BC19B6047F00F7F22A</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>CECE64B819B6047F00F7F22A</string>
+			<key>productRefGroup</key>
+			<string>CECE64C219B6047F00F7F22A</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>CECE64C019B6047F00F7F22A</string>
+				<string>CECE64DB19B6047F00F7F22A</string>
+			</array>
+		</dict>
+		<key>CECE64BC19B6047F00F7F22A</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>CECE64EB19B6047F00F7F22A</string>
+				<string>CECE64EC19B6047F00F7F22A</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>CECE64BD19B6047F00F7F22A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>CECE64D119B6047F00F7F22A</string>
+				<string>ADA1B1E519D55CF3008CF35E</string>
+				<string>CECE650A19BDD92E00F7F22A</string>
+				<string>ADA1B1E919D5749B008CF35E</string>
+				<string>CECE650E19C84C6700F7F22A</string>
+				<string>ADA1B1F119D57E37008CF35E</string>
+				<string>CECE64D519B6047F00F7F22A</string>
+				<string>CECE650419B6228F00F7F22A</string>
+				<string>CECE64FE19B61CDD00F7F22A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>CECE64BE19B6047F00F7F22A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>AD3753C119D395DA00BCDBA3</string>
+				<string>CECE651019C8663C00F7F22A</string>
+				<string>CECE64C719B6047F00F7F22A</string>
+				<string>CECE64C919B6047F00F7F22A</string>
+				<string>CECE64C519B6047F00F7F22A</string>
+				<string>9B523D91A5BE404BB6A557FE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>CECE64BF19B6047F00F7F22A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>CECE64CF19B6047F00F7F22A</string>
+				<string>CECE64FF19B61CDD00F7F22A</string>
+				<string>CECE64D719B6047F00F7F22A</string>
+				<string>CECE651419C8989100F7F22A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>CECE64C019B6047F00F7F22A</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>CECE64ED19B6047F00F7F22A</string>
+			<key>buildPhases</key>
+			<array>
+				<string>B8B4F934F53D449CA2160B4E</string>
+				<string>CECE64BD19B6047F00F7F22A</string>
+				<string>CECE64BE19B6047F00F7F22A</string>
+				<string>CECE64BF19B6047F00F7F22A</string>
+				<string>AF0670852276495883F8EDD9</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>ConsumerBeacons</string>
+			<key>productName</key>
+			<string>ConsumerBeacons</string>
+			<key>productReference</key>
+			<string>CECE64C119B6047F00F7F22A</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>CECE64C119B6047F00F7F22A</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>ConsumerBeacons.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>CECE64C219B6047F00F7F22A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CECE64C119B6047F00F7F22A</string>
+				<string>CECE64DC19B6047F00F7F22A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE64C319B6047F00F7F22A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AD3753C019D395DA00BCDBA3</string>
+				<string>CECE650F19C8663C00F7F22A</string>
+				<string>CECE64C419B6047F00F7F22A</string>
+				<string>CECE64C619B6047F00F7F22A</string>
+				<string>CECE64C819B6047F00F7F22A</string>
+				<string>CECE64DD19B6047F00F7F22A</string>
+				<string>1CEEECE606B3496B88D9C399</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE64C419B6047F00F7F22A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>CECE64C519B6047F00F7F22A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CECE64C419B6047F00F7F22A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CECE64C619B6047F00F7F22A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>CECE64C719B6047F00F7F22A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CECE64C619B6047F00F7F22A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CECE64C819B6047F00F7F22A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>CECE64C919B6047F00F7F22A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CECE64C819B6047F00F7F22A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CECE64CA19B6047F00F7F22A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CECE650619BDD8FD00F7F22A</string>
+				<string>CECE64F419B605BA00F7F22A</string>
+				<string>CECE64F519B605BE00F7F22A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>ConsumerBeacons</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE64CC19B6047F00F7F22A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>name</key>
+			<string>ConsumerBeacons-Info.plist</string>
+			<key>path</key>
+			<string>Application/ConsumerBeacons-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE64CD19B6047F00F7F22A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CECE64CE19B6047F00F7F22A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>path</key>
+			<string>Application</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE64CE19B6047F00F7F22A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE64CF19B6047F00F7F22A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CECE64CD19B6047F00F7F22A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CECE64D019B6047F00F7F22A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>main.m</string>
+			<key>path</key>
+			<string>Application/main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE64D119B6047F00F7F22A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CECE64D019B6047F00F7F22A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CECE64D219B6047F00F7F22A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ConsumerBeacons-Prefix.pch</string>
+			<key>path</key>
+			<string>Application/ConsumerBeacons-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE64D319B6047F00F7F22A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>LGAppDelegate.h</string>
+			<key>path</key>
+			<string>Application/LGAppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE64D419B6047F00F7F22A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>LGAppDelegate.m</string>
+			<key>path</key>
+			<string>Application/LGAppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE64D519B6047F00F7F22A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CECE64D419B6047F00F7F22A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CECE64D619B6047F00F7F22A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>name</key>
+			<string>Images.xcassets</string>
+			<key>path</key>
+			<string>Application/Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE64D719B6047F00F7F22A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CECE64D619B6047F00F7F22A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CECE64D819B6047F00F7F22A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>CECE64EA19B6047F00F7F22A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>CECE64D919B6047F00F7F22A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>CECE64DE19B6047F00F7F22A</string>
+				<string>CECE64E019B6047F00F7F22A</string>
+				<string>CECE64DF19B6047F00F7F22A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>CECE64DA19B6047F00F7F22A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>CECE64E819B6047F00F7F22A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>CECE64DB19B6047F00F7F22A</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>CECE64F019B6047F00F7F22A</string>
+			<key>buildPhases</key>
+			<array>
+				<string>CECE64D819B6047F00F7F22A</string>
+				<string>CECE64D919B6047F00F7F22A</string>
+				<string>CECE64DA19B6047F00F7F22A</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>CECE64E219B6047F00F7F22A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>ConsumerBeaconsTests</string>
+			<key>productName</key>
+			<string>ConsumerBeaconsTests</string>
+			<key>productReference</key>
+			<string>CECE64DC19B6047F00F7F22A</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>CECE64DC19B6047F00F7F22A</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>ConsumerBeaconsTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>CECE64DD19B6047F00F7F22A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>XCTest.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/XCTest.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>CECE64DE19B6047F00F7F22A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CECE64DD19B6047F00F7F22A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CECE64DF19B6047F00F7F22A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CECE64C419B6047F00F7F22A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CECE64E019B6047F00F7F22A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CECE64C819B6047F00F7F22A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CECE64E119B6047F00F7F22A</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>CECE64B919B6047F00F7F22A</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>CECE64C019B6047F00F7F22A</string>
+			<key>remoteInfo</key>
+			<string>ConsumerBeacons</string>
+		</dict>
+		<key>CECE64E219B6047F00F7F22A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>CECE64C019B6047F00F7F22A</string>
+			<key>targetProxy</key>
+			<string>CECE64E119B6047F00F7F22A</string>
+		</dict>
+		<key>CECE64E319B6047F00F7F22A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CECE64E919B6047F00F7F22A</string>
+				<string>CECE64E419B6047F00F7F22A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>ConsumerBeaconsTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE64E419B6047F00F7F22A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CECE64E519B6047F00F7F22A</string>
+				<string>CECE64E619B6047F00F7F22A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE64E519B6047F00F7F22A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>ConsumerBeaconsTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE64E619B6047F00F7F22A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CECE64E719B6047F00F7F22A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE64E719B6047F00F7F22A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE64E819B6047F00F7F22A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CECE64E619B6047F00F7F22A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CECE64E919B6047F00F7F22A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>ConsumerBeaconsTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE64EA19B6047F00F7F22A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CECE64E919B6047F00F7F22A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CECE64EB19B6047F00F7F22A</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_32_BIT)</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string>2a4e9368-c49a-46ab-8d8f-603380746afb</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>CECE64EC19B6047F00F7F22A</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_32_BIT)</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Distribution</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Distribution</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string>30e0dd04-3676-41c9-aa08-78d064659ebb</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>CECE64ED19B6047F00F7F22A</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>CECE64EE19B6047F00F7F22A</string>
+				<string>CECE64EF19B6047F00F7F22A</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>CECE64EE19B6047F00F7F22A</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>BD1E02019ECF136EC62DDA04</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer: Matthew Richardson (DUMWQZ5E2J)</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>ConsumerBeacons/Application/ConsumerBeacons-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>ConsumerBeacons/Application/ConsumerBeacons-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string>2a4e9368-c49a-46ab-8d8f-603380746afb</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>CECE64EF19B6047F00F7F22A</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>AF8B86587B8E410BF418B9D4</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Distribution: Matthew Richardson (F3X4PXV7XS)</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>ConsumerBeacons/Application/ConsumerBeacons-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>ConsumerBeacons/Application/ConsumerBeacons-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string>30e0dd04-3676-41c9-aa08-78d064659ebb</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>CECE64F019B6047F00F7F22A</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>CECE64F119B6047F00F7F22A</string>
+				<string>CECE64F219B6047F00F7F22A</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>CECE64F119B6047F00F7F22A</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/ConsumerBeacons.app/ConsumerBeacons</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>ConsumerBeacons/ConsumerBeacons-Prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>ConsumerBeaconsTests/ConsumerBeaconsTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>CECE64F219B6047F00F7F22A</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/ConsumerBeacons.app/ConsumerBeacons</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>ConsumerBeacons/ConsumerBeacons-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>ConsumerBeaconsTests/ConsumerBeaconsTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>CECE64F319B6053E00F7F22A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CECE651319C8989100F7F22A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Resources</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE64F419B605BA00F7F22A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CECE64D319B6047F00F7F22A</string>
+				<string>CECE64D419B6047F00F7F22A</string>
+				<string>CECE64D619B6047F00F7F22A</string>
+				<string>CECE64CC19B6047F00F7F22A</string>
+				<string>CECE64CD19B6047F00F7F22A</string>
+				<string>CECE64D019B6047F00F7F22A</string>
+				<string>CECE64D219B6047F00F7F22A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Application</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE64F519B605BE00F7F22A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>ADA1B1EE19D57E18008CF35E</string>
+				<string>ADA1B1E219D55CBA008CF35E</string>
+				<string>CECE650B19C84C2800F7F22A</string>
+				<string>CECE650019B6227300F7F22A</string>
+				<string>CECE64F719B61CA500F7F22A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>iPhone</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE64F719B61CA500F7F22A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CECE64FB19B61CDD00F7F22A</string>
+				<string>CECE64FC19B61CDD00F7F22A</string>
+				<string>CECE64FD19B61CDD00F7F22A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>BeaconFinder</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE64FB19B61CDD00F7F22A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>LGBeaconFinderViewController.h</string>
+			<key>path</key>
+			<string>iPhone/BeaconFinder/LGBeaconFinderViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE64FC19B61CDD00F7F22A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>LGBeaconFinderViewController.m</string>
+			<key>path</key>
+			<string>iPhone/BeaconFinder/LGBeaconFinderViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE64FD19B61CDD00F7F22A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>BeaconFinder.xib</string>
+			<key>path</key>
+			<string>iPhone/BeaconFinder/BeaconFinder.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE64FE19B61CDD00F7F22A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CECE64FC19B61CDD00F7F22A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CECE64FF19B61CDD00F7F22A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CECE64FD19B61CDD00F7F22A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CECE650019B6227300F7F22A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CECE650119B6228F00F7F22A</string>
+				<string>CECE650219B6228F00F7F22A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Offer</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE650119B6228F00F7F22A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>LGOfferViewController.h</string>
+			<key>path</key>
+			<string>iPhone/Offer/LGOfferViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE650219B6228F00F7F22A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>LGOfferViewController.m</string>
+			<key>path</key>
+			<string>iPhone/Offer/LGOfferViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE650419B6228F00F7F22A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CECE650219B6228F00F7F22A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CECE650619BDD8FD00F7F22A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>ADA1B1E619D5749B008CF35E</string>
+				<string>CECE650719BDD90400F7F22A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Library</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE650719BDD90400F7F22A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CECE650819BDD92E00F7F22A</string>
+				<string>CECE650919BDD92E00F7F22A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Categories</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE650819BDD92E00F7F22A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UIColor+UIColorCategory.h</string>
+			<key>path</key>
+			<string>Library/Categories/UIColor+UIColorCategory.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE650919BDD92E00F7F22A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UIColor+UIColorCategory.m</string>
+			<key>path</key>
+			<string>Library/Categories/UIColor+UIColorCategory.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE650A19BDD92E00F7F22A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CECE650919BDD92E00F7F22A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CECE650B19C84C2800F7F22A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CECE650C19C84C6700F7F22A</string>
+				<string>CECE650D19C84C6700F7F22A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>BeaconCell</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE650C19C84C6700F7F22A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>LGBeaconTableViewCell.h</string>
+			<key>path</key>
+			<string>iPhone/BeaconCell/LGBeaconTableViewCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE650D19C84C6700F7F22A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>LGBeaconTableViewCell.m</string>
+			<key>path</key>
+			<string>iPhone/BeaconCell/LGBeaconTableViewCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE650E19C84C6700F7F22A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CECE650D19C84C6700F7F22A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CECE650F19C8663C00F7F22A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>QuartzCore.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/QuartzCore.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>CECE651019C8663C00F7F22A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CECE650F19C8663C00F7F22A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CECE651319C8989100F7F22A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.jpeg</string>
+			<key>name</key>
+			<string>samsung@2x.jpg</string>
+			<key>path</key>
+			<string>Resources/samsung@2x.jpg</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CECE651419C8989100F7F22A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CECE651319C8989100F7F22A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>CECE64B919B6047F00F7F22A</string>
+</dict>
+</plist>

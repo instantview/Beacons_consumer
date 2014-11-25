@@ -12,5 +12,6 @@
 
 @property (strong, nonatomic) UIView *innerCell;
 @property (strong, nonatomic) UILabel *beaconName;
+@property (strong, nonatomic) UILabel *offerStrapline;
 
 @end
